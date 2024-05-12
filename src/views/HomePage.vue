@@ -1,10 +1,5 @@
 <template>
 	<div class="flex p-8 flex-col">
-		<input
-			type="text"
-			class="rounded border-2 border-gray-200 w-full py-2 px-4"
-			placeholder="Search for Meals..."
-		/>
 		<div class="flex gap-2 justify-center mt-2">
 			<router-link
 				:to="{ name: 'byLetter', params: { letter } }"
