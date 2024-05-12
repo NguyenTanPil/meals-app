@@ -18,7 +18,7 @@
 				>Search by Letter</router-link
 			>
 			<router-link
-				:to="{ name: 'byIngredients' }"
+				:to="{ name: 'ingredients' }"
 				class="px-2 h-full hover:bg-purple-100 inline-flex items-center"
 				>Search Ingredients</router-link
 			>

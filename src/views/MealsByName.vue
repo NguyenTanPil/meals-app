@@ -8,32 +8,11 @@
 			@change="searchMeals"
 		/>
 	</div>
-	<div class="grid grid-cols-1 md:grid-cols-3 gap-3 p-8">
-		<div
-			v-for="meal of meals"
-			:key="meal.idMeal"
-			class="bg-white shadow rounded"
-		>
-			<router-link :to="{ name: 'mealDetails', params: { id: meal.idMeal } }"
-				><img
-					:src="meal.strMealThumb"
-					:alt="meal.strMeal"
-					class="rounded-t w-full h-48 object-cover"
-			/></router-link>
-
-			<div class="p-3">
-				<h3 class="font-bold">{{ meal.strMeal }}</h3>
-				<p class="mb-4"></p>
-				<div class="p-3 flex">
-					<YoutubeButton :href="meal.strYoutube">View</YoutubeButton>
-				</div>
-			</div>
-		</div>
-	</div>
+	<Meals :meals="meals" />
 </template>
 
 <script setup>
-import YoutubeButton from '@/components/YoutubeButton.vue';
+import Meals from '@/components/Meals.vue';
 import store from '@/store';
 import { computed, onMounted, ref } from 'vue';
 import { useRoute } from 'vue-router';
